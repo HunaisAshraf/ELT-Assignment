@@ -42,15 +42,15 @@ const ContextProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    let start = (page - 1) * noOfItem;
-    let filteredCourses = data.slice(start, noOfItem);
+    const start = (page - 1) * noOfItem;
+    const filteredCourses = data.slice(start, noOfItem);
     setCourses(filteredCourses);
     setNoOfPage(data.length / noOfItem);
   }, [noOfItem]);
 
   useEffect(() => {
-    let start = (page - 1) * noOfItem;
-    let filteredCourses = data.slice(start, noOfItem * page);
+    const start = (page - 1) * noOfItem;
+    const filteredCourses = data.slice(start, noOfItem * page);
     setCourses(filteredCourses);
   }, [page]);
 
