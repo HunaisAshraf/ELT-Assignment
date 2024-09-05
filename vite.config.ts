@@ -10,12 +10,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src/"),
     },
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: "./src/main.tsx",
-      },
-      external: ["**/*.test.tsx", "**/*.test.ts,**/*.test.jsx", "**/*.test.js"],
-    },
-  },
 });
